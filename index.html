@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bulletin Board</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="bulletin.css">
+</head>
+
+<body id="myPage">
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme-d2 w3-left-align">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+        <button onclick="document.getElementById('add_card').style.display='block'" class="w3-bar-item w3-btn w3-round w3-center w3-red"><i class="fa fa-thumb-tack"></i></button>
+        <a href="#tech" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Tech</a>
+        <a href="#music" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Music</a>
+        <a href="#other" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Other</a>
+        <button onclick="document.getElementById('add_tab').style.display='block'" class="w3-bar-item w3-btn w3-round w3-left w3-black">+</button>
+        </div>
+    
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+            <a href="#about" class="w3-bar-item w3-button">About</a>
+            <a href="#work" class="w3-bar-item w3-button">Our Work</a>
+            <a href="#pricing" class="w3-bar-item w3-button">Pricing</a>
+            <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+            <div>
+                <form action="/login.php" method="POST">
+                <input type="text" placeholder="Dev-Key" name="devkey" class="w3-bar-item">
+                <button type="submit" class="w3-bar-item w3-button">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-padding-16" style="background-image: url('img/bulletin.png'); padding-left: 40px;">
+        
+        <div id="add_card" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+              <header class="w3-container w3-red"> 
+                <span onclick="document.getElementById('add_card').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <h2>Add Card</h2>
+              </header>
+              <div class="w3-container">
+                <form class="w3-container" action="index.html" target="_blank" method="POST">
+                    <div class="w3-section w3-card-4">      
+                        <input class="w3-input" type="text" name="URL" placeholder="URL" required>
+                        <input class="w3-input" type="text" name="label" placeholder="Label" required>
+                        <button type="button" class="w3-button w3-center w3-red"><i class="fa fa-paperclip"></i> Upload Image</button>
+                        <button type="submit" class="w3-button w3-right w3-red"><i class="fa fa-thumb-tack"></i></button>
+                    </div>
+                </form>
+        
+              </div>
+              <footer class="w3-container w3-red">
+              
+              </footer>
+            </div>
+        </div>
+
+        <div id="add_tab" class="w3-modal">
+            <div class="w3-modal-content w3-card-4">
+              <header class="w3-container w3-red"> 
+                <span onclick="document.getElementById('add_tab').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <h2>Add Tab</h2>
+              </header>
+              <div class="w3-container">
+                <form class="w3-container" action="index.html" target="_blank" method="POST">
+                    <div class="w3-section w3-card-4">      
+                        <label style="color:#FFF">Add Tab</label>
+                        <input class="w3-input" type="text" name="board" placeholder="Tab Name" required>
+                        <button type="submit" class="w3-button w3-right w3-red">+</button>
+                    </div>
+                </form>
+        
+              </div>
+              <footer class="w3-container w3-red">
+              
+              </footer>
+            </div>
+        </div>
+
+
+        <hr>
+        <div class="w3-card-4 card">
+            <a href="https://htmlcolorcodes.com/" target="_blank">
+            <img class="card" src="img/html_color_codes.jpg" alt="colors">
+            <div class="w3-container w3-center w3-white">
+            <p><b>HTML Color Codes</b></p>
+            </a>
+            </div>
+        </div>
+        <br>
+        <div class="w3-card-4 card">
+            <a href="https://www.w3schools.com/w3css/w3css_references.asp" target="_blank">
+            <img class="card" src="img/w3_css.jpg" alt="colors">
+            <div class="w3-container w3-center w3-white">
+            <p><b>W3 CSS</b></p>
+            </a>
+        </div>
+        <br>
+        <div class="w3-card-4 card">
+            <a href="https://fontawesome.com/icons?d=gallery" target="_blank">
+            <img class="card" src="img/font_awesome.jpg" alt="colors">
+            <div class="w3-container w3-center w3-white">
+            <p><b>Font Awesome</b></p>
+            </a>
+        </div>
+        <br>
+        <div class="w3-card-4 card">
+            <a href="https://tiny-helpers.dev/" target="_blank">
+            <img class="card" src="img/tiny_helpers.jpg" alt="colors">
+            <div class="w3-container w3-center w3-white">
+            <p><b>Tiny Helpers</b></p>
+            </a>
+            </div>
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+</body>
